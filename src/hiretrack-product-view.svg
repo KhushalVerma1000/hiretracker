@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="ht-t ht-d" font-family="Geist, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<title id="ht-t">HireTrack product view</title>
+<desc id="ht-d">Animated walkthrough: a recruiter marks a candidate as Reached, the update is copied for the recruiter group, then a client line-up tracker is prepared and sent from the Email Tracker.</desc>
+<defs>
+<clipPath id="win"><rect width="960" height="600" rx="14"/></clipPath>
+<linearGradient id="edge" x1="1" x2="0"><stop offset="0" stop-color="#14161F" stop-opacity=".14"/><stop offset="1" stop-color="#14161F" stop-opacity="0"/></linearGradient>
+<linearGradient id="hdr" x1="0" x2="1"><stop offset="0" stop-color="#3D4FC4"/><stop offset="1" stop-color="#5B6BE0"/></linearGradient>
+</defs>
+<style>
+text{font-variant-numeric:tabular-nums}
+.root,.cursor,.rip,.pA,.pB,.lA,.lB,.seg,.kA,.kB,.toast,.panel,.dim,.sA,.sB{animation-duration:14s;animation-iteration-count:infinite;animation-timing-function:cubic-bezier(.4,0,.2,1)}
+.rip{transform-box:fill-box;transform-origin:center;opacity:0}
+.root{animation-name:root}
+.cursor{animation-name:cur}
+.r1{animation-name:rip1} .r2{animation-name:rip2} .r3{animation-name:rip3}
+.pA,.lA,.kA,.sA{animation-name:outA} .pB,.lB,.kB,.sB{animation-name:inB}
+.pB,.lB,.seg,.kB,.sB{opacity:0}
+.seg{animation-name:inB}
+.toast{animation-name:toast;opacity:0}
+.panel{animation-name:panel}
+.dim{animation-name:dim;opacity:0}
+.kA,.kB{animation-name:inK} .kA{animation-name:outK}
+.sA{animation-name:outS} .sB{animation-name:inS}
+@keyframes root{0%{opacity:0}3%{opacity:1}93%{opacity:1}97%{opacity:0}100%{opacity:0}}
+@keyframes cur{0%,10.7%{transform:translate(880px,560px)}21.4%,44.3%{transform:translate(850px,312px)}52.9%,65.7%{transform:translate(754px,46px)}74.3%,96.9%{transform:translate(870px,538px)}97%,100%{transform:translate(880px,560px)}}
+@keyframes rip1{0%,22.8%{opacity:0;transform:scale(.3)}22.9%{opacity:.55;transform:scale(.3)}26%,100%{opacity:0;transform:scale(2.4)}}
+@keyframes rip2{0%,54.2%{opacity:0;transform:scale(.3)}54.3%{opacity:.55;transform:scale(.3)}58%,100%{opacity:0;transform:scale(2.4)}}
+@keyframes rip3{0%,75.6%{opacity:0;transform:scale(.3)}75.7%{opacity:.55;transform:scale(.3)}79%,100%{opacity:0;transform:scale(2.4)}}
+@keyframes outA{0%,24.2%{opacity:1}24.8%,96.9%{opacity:0}97%,100%{opacity:1}}
+@keyframes inB{0%,24.2%{opacity:0}24.8%,96.9%{opacity:1}97%,100%{opacity:0}}
+@keyframes outK{0%,25.4%{opacity:1}26%,96.9%{opacity:0}97%,100%{opacity:1}}
+@keyframes inK{0%,25.4%{opacity:0}26%,96.9%{opacity:1}97%,100%{opacity:0}}
+@keyframes outS{0%,77%{opacity:1}77.6%,96.9%{opacity:0}97%,100%{opacity:1}}
+@keyframes inS{0%,77%{opacity:0}77.6%,96.9%{opacity:1}97%,100%{opacity:0}}
+@keyframes toast{0%,28%{opacity:0;transform:translateY(18px)}30%,45%{opacity:1;transform:translateY(0)}47.5%,100%{opacity:0;transform:translateY(18px)}}
+@keyframes panel{0%,55.7%{transform:translateX(600px)}61.4%,96.9%{transform:translateX(0)}97%,100%{transform:translateX(600px)}}
+@keyframes dim{0%,55.7%{opacity:0}61.4%,96.9%{opacity:1}97%,100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+ .root,.cursor,.rip,.pA,.pB,.lA,.lB,.seg,.kA,.kB,.toast,.panel,.dim,.sA,.sB{animation:none!important}
+ .root{opacity:1} .cursor,.toast,.dim{display:none} .panel{transform:translateX(600px)}
+}
+.cam{transform-origin:0 0;animation:cam 14s infinite cubic-bezier(.45,0,.2,1);will-change:transform}@keyframes cam{0%{transform:translate(0.0px,0.0px) scale(1)}15%{transform:translate(0.0px,0.0px) scale(1)}21.5%{transform:translate(-864.0px,-292.8px) scale(1.9)}27.5%{transform:translate(-864.0px,-292.8px) scale(1.9)}32%{transform:translate(0.0px,0.0px) scale(1)}48%{transform:translate(0.0px,0.0px) scale(1)}53%{transform:translate(-960.0px,0.0px) scale(2.0)}57.5%{transform:translate(-960.0px,0.0px) scale(2.0)}63%{transform:translate(-192.0px,-60.0px) scale(1.2)}72%{transform:translate(-192.0px,-120.0px) scale(1.2)}75%{transform:translate(-960.0px,-600.0px) scale(2.0)}80%{transform:translate(-960.0px,-600.0px) scale(2.0)}85%{transform:translate(0.0px,0.0px) scale(1)}100%{transform:translate(0.0px,0.0px) scale(1)}}@media (prefers-reduced-motion:reduce){.cam,.cur2,[class^=rp]{animation:none!important}.cur2{display:none}}
+</style>
+<g clip-path="url(#win)"><g class="root"><g class="cam">
+<rect width="960" height="600" fill="#F6F7FB"/>
+
+<rect width="180" height="600" fill="#fff"/><rect x="179" width="1" height="600" fill="#E3E6EF"/>
+<rect x="16" y="18" width="24" height="24" rx="7" fill="url(#hdr)"/><path d="M22 31l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" transform="translate(-2 -3)"/>
+<text x="48" y="36" font-size="16" font-weight="600" fill="#3D4FC4" text-anchor="start" >HireTrack</text>
+<text x="22" y="76" font-size="9.5" font-weight="500" fill="#5B6173" text-anchor="start" letter-spacing=".8">RECRUIT</text>
+<rect x="10" y="84" width="160" height="32" rx="8" fill="#EEF0FC"/><rect x="22" y="93" width="14" height="14" rx="4" fill="#2B3A9E" opacity=".35"/><text x="46" y="105" font-size="12.5" font-weight="500" fill="#2B3A9E" text-anchor="start" >HR workbench</text><rect x="22" y="127" width="14" height="14" rx="4" fill="#5B6173" opacity=".35"/><text x="46" y="139" font-size="12.5" font-weight="500" fill="#5B6173" text-anchor="start" >Clients</text><rect x="22" y="161" width="14" height="14" rx="4" fill="#5B6173" opacity=".35"/><text x="46" y="173" font-size="12.5" font-weight="500" fill="#5B6173" text-anchor="start" >Open positions</text>
+<text x="22" y="214" font-size="9.5" font-weight="500" fill="#5B6173" text-anchor="start" letter-spacing=".8">MEASURE</text>
+<rect x="22" y="231" width="14" height="14" rx="4" fill="#5B6173" opacity=".35"/><text x="46" y="243" font-size="12.5" font-weight="500" fill="#5B6173" text-anchor="start" >Analytics</text><rect x="22" y="265" width="14" height="14" rx="4" fill="#5B6173" opacity=".35"/><text x="46" y="277" font-size="12.5" font-weight="500" fill="#5B6173" text-anchor="start" >Performance</text>
+<text x="22" y="318" font-size="9.5" font-weight="500" fill="#5B6173" text-anchor="start" letter-spacing=".8">ORGANISATION</text>
+<rect x="22" y="335" width="14" height="14" rx="4" fill="#5B6173" opacity=".35"/><text x="46" y="347" font-size="12.5" font-weight="500" fill="#5B6173" text-anchor="start" >Employees</text><rect x="22" y="369" width="14" height="14" rx="4" fill="#5B6173" opacity=".35"/><text x="46" y="381" font-size="12.5" font-weight="500" fill="#5B6173" text-anchor="start" >Settings</text>
+<rect x="12" y="540" width="156" height="1" fill="#E3E6EF"/>
+<circle cx="32" cy="568" r="14" fill="#EEF0FC"/><text x="32" y="572" font-size="11" font-weight="600" fill="#2B3A9E" text-anchor="middle" >AS</text><text x="54" y="566" font-size="12" font-weight="500" fill="#14161F" text-anchor="start" >Asha Sharma</text><text x="54" y="581" font-size="10.5" font-weight="400" fill="#5B6173" text-anchor="start" >HR</text>
+<text x="208" y="52" font-size="20" font-weight="600" fill="#14161F" text-anchor="start" >HR workbench</text><text x="208" y="70" font-size="12" font-weight="400" fill="#5B6173" text-anchor="start" >Today’s line-up, in one place.</text>
+<rect x="700" y="30" width="108" height="32" rx="8" fill="#fff" stroke="#D5D9E6"/><text x="754" y="50" font-size="12" font-weight="500" fill="#14161F" text-anchor="middle" >Email Tracker</text>
+<rect x="816" y="30" width="116" height="32" rx="8" fill="#3D4FC4"/><text x="874" y="50" font-size="12" font-weight="500" fill="#fff" text-anchor="middle" >Add Candidate</text>
+<rect x="208" y="92" width="170" height="62" rx="12" fill="#fff" stroke="#E3E6EF"/><text x="222" y="112" font-size="11" font-weight="400" fill="#5B6173" text-anchor="start" >Lined up today</text>
+<text x="222" y="140" font-size="22" font-weight="600" fill="#14161F" text-anchor="start" >24</text>
+<rect x="390" y="92" width="170" height="62" rx="12" fill="#fff" stroke="#E3E6EF"/><text x="404" y="112" font-size="11" font-weight="400" fill="#5B6173" text-anchor="start" >Reached</text>
+<g class="kA"><text x="404" y="140" font-size="22" font-weight="600" fill="#14161F" text-anchor="start" >11</text></g><g class="kB"><text x="404" y="140" font-size="22" font-weight="600" fill="#1B6B3A" text-anchor="start" >12</text></g>
+<rect x="572" y="92" width="170" height="62" rx="12" fill="#fff" stroke="#E3E6EF"/><text x="586" y="112" font-size="11" font-weight="400" fill="#5B6173" text-anchor="start" >Interviews this week</text>
+<text x="586" y="140" font-size="22" font-weight="600" fill="#14161F" text-anchor="start" >9</text>
+<rect x="754" y="92" width="170" height="62" rx="12" fill="#fff" stroke="#E3E6EF"/><text x="768" y="112" font-size="11" font-weight="400" fill="#5B6173" text-anchor="start" >No position tagged</text>
+<text x="768" y="140" font-size="22" font-weight="600" fill="#9A3412" text-anchor="start" >3</text>
+<rect x="208" y="170" width="59" height="26" rx="13" fill="#3D4FC4"/><text x="237.6" y="187" font-size="11.5" font-weight="500" fill="#fff" text-anchor="middle" >All 24</text>
+<rect x="275.2" y="170" width="84" height="26" rx="13" fill="#fff" stroke="#E3E6EF"/><text x="317.2" y="187" font-size="11.5" font-weight="400" fill="#14161F" text-anchor="middle" >Lined up 8</text>
+<rect x="367.2" y="170" width="84" height="26" rx="13" fill="#fff" stroke="#E3E6EF"/><text x="409.2" y="187" font-size="11.5" font-weight="400" fill="#14161F" text-anchor="middle" >Reached 11</text>
+<rect x="459.2" y="170" width="90" height="26" rx="13" fill="#fff" stroke="#E3E6EF"/><text x="504.3" y="187" font-size="11.5" font-weight="400" fill="#14161F" text-anchor="middle" >Interview 5</text>
+<rect x="208" y="208" width="716" height="224" rx="12" fill="#fff" stroke="#E3E6EF"/>
+<text x="224" y="228" font-size="9.5" font-weight="500" fill="#5B6173" text-anchor="start" letter-spacing=".8">CANDIDATE</text><text x="400" y="228" font-size="9.5" font-weight="500" fill="#5B6173" text-anchor="start" letter-spacing=".8">POSITION</text><text x="560" y="228" font-size="9.5" font-weight="500" fill="#5B6173" text-anchor="start" letter-spacing=".8">STAGE</text><text x="790" y="228" font-size="9.5" font-weight="500" fill="#5B6173" text-anchor="start" letter-spacing=".8">NEXT STEP</text>
+<rect x="209" y="236" width="714" height="1" fill="#E3E6EF"/>
+<circle cx="238" cy="264" r="14" fill="#EEF0FC"/><text x="238" y="268" font-size="11" font-weight="600" fill="#2B3A9E" text-anchor="middle" >AG</text><text x="262" y="263" font-size="12.5" font-weight="500" fill="#14161F" text-anchor="start" >Aman Gupta</text><text x="262" y="277" font-size="10" font-weight="400" fill="#5B6173" text-anchor="start" >98••• ••10</text>
+<text x="400" y="268" font-size="12" font-weight="400" fill="#14161F" text-anchor="start" >Field Sales Executive</text>
+<g class=""><rect x="560" y="247" width="72" height="22" rx="11" fill="#FEF3E2"/><text x="595.8" y="262" font-size="11" font-weight="500" fill="#9A3412" text-anchor="middle" >Interview</text></g><g><rect x="560" y="276" width="12" height="4" rx="2" fill="#3D4FC4"/><rect x="574" y="276" width="12" height="4" rx="2" fill="#3D4FC4"/><rect x="588" y="276" width="12" height="4" rx="2" fill="#3D4FC4"/><rect x="602" y="276" width="12" height="4" rx="2" fill="#3D4FC4"/><rect x="616" y="276" width="12" height="4" rx="2" fill="#E3E6EF"/><rect x="630" y="276" width="12" height="4" rx="2" fill="#E3E6EF"/></g>
+<rect x="782" y="250" width="136" height="28" rx="8" fill="#3D4FC4"/><text x="850" y="268" font-size="11.5" font-weight="500" fill="#fff" text-anchor="middle" >Make Offer</text>
+<rect x="914" y="250" width="0" height="0"/>
+<rect x="209" y="288" width="714" height="1" fill="#E3E6EF"/>
+<circle cx="238" cy="312" r="14" fill="#E6F4EA"/><text x="238" y="316" font-size="11" font-weight="600" fill="#1B6B3A" text-anchor="middle" >RV</text><text x="262" y="311" font-size="12.5" font-weight="500" fill="#14161F" text-anchor="start" >Rohit Verma</text><text x="262" y="325" font-size="10" font-weight="400" fill="#5B6173" text-anchor="start" >98••• ••21</text>
+<text x="400" y="316" font-size="12" font-weight="400" fill="#14161F" text-anchor="start" >Sales Executive</text>
+<g class="pA"><rect x="560" y="295" width="65" height="22" rx="11" fill="#EEF0FC"/><text x="592.6" y="310" font-size="11" font-weight="500" fill="#2B3A9E" text-anchor="middle" >Lined up</text></g><g class="pB"><rect x="560" y="295" width="59" height="22" rx="11" fill="#E6F4EA"/><text x="589.4" y="310" font-size="11" font-weight="500" fill="#1B6B3A" text-anchor="middle" >Reached</text></g>
+<g><rect x="560" y="324" width="12" height="4" rx="2" fill="#3D4FC4"/><rect x="574" y="324" width="12" height="4" rx="2" fill="#3D4FC4"/><rect x="588" y="324" width="12" height="4" rx="2" fill="#E3E6EF"/><rect x="602" y="324" width="12" height="4" rx="2" fill="#E3E6EF"/><rect x="616" y="324" width="12" height="4" rx="2" fill="#E3E6EF"/><rect x="630" y="324" width="12" height="4" rx="2" fill="#E3E6EF"/></g><g class="seg"><rect x="588" y="324" width="12" height="4" rx="2" fill="#3D4FC4"/></g>
+<rect x="782" y="298" width="136" height="28" rx="8" fill="#3D4FC4"/>
+<g class="lA"><text x="850" y="316" font-size="11.5" font-weight="500" fill="#fff" text-anchor="middle" >Mark Reached</text></g><g class="lB"><text x="850" y="316" font-size="11.5" font-weight="500" fill="#fff" text-anchor="middle" >Schedule Interview</text></g>
+<rect x="914" y="298" width="0" height="0"/>
+<rect x="209" y="336" width="714" height="1" fill="#E3E6EF"/>
+<circle cx="238" cy="360" r="14" fill="#FEF3E2"/><text x="238" y="364" font-size="11" font-weight="600" fill="#9A3412" text-anchor="middle" >PN</text><text x="262" y="359" font-size="12.5" font-weight="500" fill="#14161F" text-anchor="start" >Priya Nair</text><text x="262" y="373" font-size="10" font-weight="400" fill="#5B6173" text-anchor="start" >98••• ••32</text>
+<text x="400" y="364" font-size="12" font-weight="400" fill="#14161F" text-anchor="start" >HR Recruiter</text>
+<g class=""><rect x="560" y="343" width="72" height="22" rx="11" fill="#F1F2F6"/><text x="595.8" y="358" font-size="11" font-weight="500" fill="#5B6173" text-anchor="middle" >Screening</text></g><g><rect x="560" y="372" width="12" height="4" rx="2" fill="#3D4FC4"/><rect x="574" y="372" width="12" height="4" rx="2" fill="#E3E6EF"/><rect x="588" y="372" width="12" height="4" rx="2" fill="#E3E6EF"/><rect x="602" y="372" width="12" height="4" rx="2" fill="#E3E6EF"/><rect x="616" y="372" width="12" height="4" rx="2" fill="#E3E6EF"/><rect x="630" y="372" width="12" height="4" rx="2" fill="#E3E6EF"/></g>
+<rect x="782" y="346" width="136" height="28" rx="8" fill="#3D4FC4"/><text x="850" y="364" font-size="11.5" font-weight="500" fill="#fff" text-anchor="middle" >Line Up</text>
+<rect x="914" y="346" width="0" height="0"/>
+<rect x="209" y="384" width="714" height="1" fill="#E3E6EF"/>
+<circle cx="238" cy="408" r="14" fill="#F1F2F6"/><text x="238" y="412" font-size="11" font-weight="600" fill="#5B6173" text-anchor="middle" >SK</text><text x="262" y="407" font-size="12.5" font-weight="500" fill="#14161F" text-anchor="start" >Sneha Kulkarni</text><text x="262" y="421" font-size="10" font-weight="400" fill="#5B6173" text-anchor="start" >98••• ••43</text>
+<text x="400" y="412" font-size="12" font-weight="400" fill="#14161F" text-anchor="start" >BFSI Relationship Mgr</text>
+<g class=""><rect x="560" y="391" width="65" height="22" rx="11" fill="#EEF0FC"/><text x="592.6" y="406" font-size="11" font-weight="500" fill="#2B3A9E" text-anchor="middle" >Lined up</text></g><g><rect x="560" y="420" width="12" height="4" rx="2" fill="#3D4FC4"/><rect x="574" y="420" width="12" height="4" rx="2" fill="#3D4FC4"/><rect x="588" y="420" width="12" height="4" rx="2" fill="#E3E6EF"/><rect x="602" y="420" width="12" height="4" rx="2" fill="#E3E6EF"/><rect x="616" y="420" width="12" height="4" rx="2" fill="#E3E6EF"/><rect x="630" y="420" width="12" height="4" rx="2" fill="#E3E6EF"/></g>
+<rect x="782" y="394" width="136" height="28" rx="8" fill="#3D4FC4"/><text x="850" y="412" font-size="11.5" font-weight="500" fill="#fff" text-anchor="middle" >Mark Reached</text>
+<rect x="914" y="394" width="0" height="0"/>
+<g class="toast"><rect x="250" y="490" width="520" height="52" rx="12" fill="#14161F"/>
+<circle cx="278" cy="516" r="11" fill="#2E9E5B"/><path d="M272.5 516.5l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="300" y="512" font-size="12.5" font-weight="600" fill="#fff" text-anchor="start" >Copied for the recruiter group</text>
+<text x="300" y="529" font-size="10.5" font-weight="400" fill="#C7CBDA" text-anchor="start" >Rohit Verma · 98••• ••21 · Noida · Sales Executive · Reached</text></g>
+<rect class="dim" width="960" height="600" fill="#14161F" opacity="0" style="fill-opacity:.18"/>
+<g class="panel"><rect x="356" width="24" height="600" fill="url(#edge)" transform="translate(0 0)"/><rect x="380" width="580" height="600" fill="#fff"/>
+<text x="404" y="52" font-size="18" font-weight="600" fill="#14161F" text-anchor="start" >Email Tracker</text><text x="404" y="70" font-size="11.5" font-weight="400" fill="#5B6173" text-anchor="start" >Pick client, location and date. The tracker is built for you.</text>
+<text x="404" y="98" font-size="9" font-weight="500" fill="#5B6173" text-anchor="start" letter-spacing=".8">CLIENT</text><rect x="404" y="104" width="168" height="34" rx="8" fill="#fff" stroke="#D5D9E6"/><text x="416" y="125" font-size="12" font-weight="500" fill="#14161F" text-anchor="start" >Acme Retail</text><path d="M552 119l4 4 4-4" fill="none" stroke="#5B6173" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="584" y="98" font-size="9" font-weight="500" fill="#5B6173" text-anchor="start" letter-spacing=".8">HIRING LOCATION</text><rect x="584" y="104" width="168" height="34" rx="8" fill="#fff" stroke="#D5D9E6"/><text x="596" y="125" font-size="12" font-weight="500" fill="#14161F" text-anchor="start" >Noida</text><path d="M732 119l4 4 4-4" fill="none" stroke="#5B6173" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="764" y="98" font-size="9" font-weight="500" fill="#5B6173" text-anchor="start" letter-spacing=".8">DATE</text><rect x="764" y="104" width="168" height="34" rx="8" fill="#fff" stroke="#D5D9E6"/><text x="776" y="125" font-size="12" font-weight="500" fill="#14161F" text-anchor="start" >Fri, 16 Oct</text><path d="M912 119l4 4 4-4" fill="none" stroke="#5B6173" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="404" y="158" width="112" height="24" rx="12" fill="#EEF0FC"/><text x="460" y="174" font-size="11" font-weight="500" fill="#2B3A9E" text-anchor="middle" >Lineup tracker</text>
+<rect x="526" y="158" width="150" height="24" rx="12" fill="#E6F4EA"/><path d="M538 170l3 3 5-6" fill="none" stroke="#1B6B3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><text x="552" y="174" font-size="11" font-weight="500" fill="#1B6B3A" text-anchor="start" >Ready to send · 3</text>
+<rect x="404" y="200" width="532" height="168" rx="10" fill="#fff" stroke="#E3E6EF"/><rect x="404" y="200" width="532" height="30" rx="10" fill="#EEF0FC"/><rect x="404" y="214" width="532" height="16" fill="#EEF0FC"/>
+<text x="418" y="219" font-size="10.5" font-weight="600" fill="#2B3A9E" text-anchor="start" >Candidate</text>
+<text x="566" y="219" font-size="10.5" font-weight="600" fill="#2B3A9E" text-anchor="start" >Position</text>
+<text x="730" y="219" font-size="10.5" font-weight="600" fill="#2B3A9E" text-anchor="start" >Time</text>
+<text x="810" y="219" font-size="10.5" font-weight="600" fill="#2B3A9E" text-anchor="start" >Status</text>
+<rect x="405" y="230" width="530" height="1" fill="#E3E6EF"/>
+<text x="418" y="258" font-size="12" font-weight="500" fill="#14161F" text-anchor="start" >Rohit Verma</text><text x="566" y="258" font-size="11.5" font-weight="400" fill="#14161F" text-anchor="start" >Sales Executive</text><text x="730" y="258" font-size="11.5" font-weight="400" fill="#14161F" text-anchor="start" >10:30 AM</text><g class=""><rect x="810" y="242" width="59" height="22" rx="11" fill="#E6F4EA"/><text x="839.4" y="257" font-size="11" font-weight="500" fill="#1B6B3A" text-anchor="middle" >Reached</text></g>
+<rect x="405" y="276" width="530" height="1" fill="#E3E6EF"/>
+<text x="418" y="304" font-size="12" font-weight="500" fill="#14161F" text-anchor="start" >Sneha Kulkarni</text><text x="566" y="304" font-size="11.5" font-weight="400" fill="#14161F" text-anchor="start" >BFSI Relationship Mgr</text><text x="730" y="304" font-size="11.5" font-weight="400" fill="#14161F" text-anchor="start" >11:15 AM</text><g class=""><rect x="810" y="288" width="65" height="22" rx="11" fill="#EEF0FC"/><text x="842.6" y="303" font-size="11" font-weight="500" fill="#2B3A9E" text-anchor="middle" >Lined up</text></g>
+<rect x="405" y="322" width="530" height="1" fill="#E3E6EF"/>
+<text x="418" y="350" font-size="12" font-weight="500" fill="#14161F" text-anchor="start" >Dev Malhotra</text><text x="566" y="350" font-size="11.5" font-weight="400" fill="#14161F" text-anchor="start" >Field Sales Executive</text><text x="730" y="350" font-size="11.5" font-weight="400" fill="#14161F" text-anchor="start" >12:00 PM</text><g class=""><rect x="810" y="334" width="65" height="22" rx="11" fill="#EEF0FC"/><text x="842.6" y="349" font-size="11" font-weight="500" fill="#2B3A9E" text-anchor="middle" >Lined up</text></g>
+<text x="404" y="392" font-size="10.5" font-weight="400" fill="#5B6173" text-anchor="start" >Only Acme Retail candidates are included. Other clients are never mixed in.</text>
+<rect x="404" y="408" width="532" height="98" rx="10" fill="#F6F7FB" stroke="#E3E6EF"/><text x="420" y="432" font-size="9.5" font-weight="500" fill="#5B6173" text-anchor="start" >Subject</text><text x="420" y="450" font-size="12" font-weight="600" fill="#14161F" text-anchor="start" >Line-up for Fri, 16 Oct · Acme Retail · Noida</text><text x="420" y="470" font-size="11" font-weight="400" fill="#5B6173" text-anchor="start" >Hi team, sharing tomorrow’s candidates for the Noida opening. Details below.</text><text x="420" y="488" font-size="11" font-weight="400" fill="#5B6173" text-anchor="start" >Please confirm the interview slots.</text>
+<rect x="676" y="520" width="104" height="36" rx="9" fill="#fff" stroke="#D5D9E6"/><text x="728" y="543" font-size="12" font-weight="500" fill="#14161F" text-anchor="middle" >Copy email</text>
+<g class="sA"><rect x="792" y="520" width="132" height="36" rx="9" fill="#3D4FC4"/><text x="858" y="543" font-size="12" font-weight="500" fill="#fff" text-anchor="middle" >Send to client</text></g>
+<g class="sB"><rect x="792" y="520" width="132" height="36" rx="9" fill="#2E9E5B"/><path d="M813 538l4 4 8-9" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="868" y="543" font-size="12" font-weight="600" fill="#fff" text-anchor="middle" >Sent</text></g>
+<g class="sB"><text x="404" y="543" font-size="11" font-weight="500" fill="#1B6B3A" text-anchor="start" >Saved to sent history</text></g>
+</g>
+<circle class="rip r1" cx="850" cy="312" r="16" fill="#3D4FC4"/>
+<circle class="rip r2" cx="754" cy="46" r="16" fill="#3D4FC4"/>
+<circle class="rip r3" cx="870" cy="538" r="16" fill="#3D4FC4"/>
+<g class="cursor"><path d="M0 0v17l4.6-4.2 3.2 7.2 2.6-1.2-3.2-7H14z" fill="#14161F" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></g>
+</g></g></g>
+<rect x=".5" y=".5" width="959" height="599" rx="14" fill="none" stroke="#E3E6EF"/></svg>

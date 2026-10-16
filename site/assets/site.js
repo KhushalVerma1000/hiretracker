@@ -1,0 +1,15 @@
+(()=>{const d=document,$=s=>[...d.querySelectorAll(s)];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.2});$('.txt').forEach(e=>io.observe(e));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const cl=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)),hz=d.getElementById('hz'),ht=d.getElementById('ht'),st=d.getElementById('stage'),chips=$('.chip'),frames=$('.frame');
+if(!st)return;let mx=0,my=0,tx=0,ty=0,n=0;
+st.addEventListener('pointermove',e=>{const r=st.getBoundingClientRect();mx=(e.clientX-r.left)/r.width-.5;my=(e.clientY-r.top)/r.height-.5});
+st.addEventListener('pointerleave',()=>{mx=my=0});
+const vio=new IntersectionObserver(es=>es.forEach(e=>{const i=e.target.querySelector('img');if(e.isIntersecting){if(!i._s&&i.dataset.restart){i._s=1;i.src=i.dataset.restart+'?r='+(++n)}}else i._s=0}),{threshold:.5});
+frames.forEach(f=>vio.observe(f));
+(function loop(){tx+=(mx-tx)*.07;ty+=(my-ty)*.07;const vh=innerHeight,s=cl(scrollY/(vh*.9));
+hz.style.transform='scale('+(1+.12*s)+') translateY('+(-s*28)+'px)';ht.style.transform='rotateY('+tx*11+'deg) rotateX('+-ty*8+'deg)';
+chips.forEach((c,i)=>c.style.transform='translate3d('+tx*(26+i*14)+'px,'+ty*(18+i*10)+'px,0)');
+frames.forEach(f=>{const r=f.closest('.row').getBoundingClientRect(),e=cl((vh-r.top)/(vh*.65)),k=+f.dataset.dir;f.style.opacity=cl(e*1.5);
+f.style.transform='perspective(1400px) rotateY('+k*(1-e)*-22+'deg) rotateX('+(1-e)*12+'deg) translateY('+(1-e)*70+'px) scale('+(.88+.12*e)+')'});
+requestAnimationFrame(loop)})()})();
