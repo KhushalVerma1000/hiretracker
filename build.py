@@ -4,17 +4,17 @@ Edit CONFIG, rebuild, commit. Empty values show as yellow [placeholders] on the 
 import os, re, shutil, html as H
 
 CONFIG = dict(
-    NAME="JopUP",            # product name (must match the OAuth consent screen exactly)
-    ACCENT="UP",             # part of the logo shown in colour ("" for none)
+    NAME="HireTracker",            # product name (must match the OAuth consent screen exactly)
+    ACCENT="Tracker",             # part of the logo shown in colour ("" for none)
     OLD_NAME="HireTrack",    # name baked into the source SVG screens (replaced at build)
-    DOMAIN="https://jopup.com",  # PLACEHOLDER: set the domain you own
+    DOMAIN="https://hiretracker.in",  # PLACEHOLDER: set the domain you own
     EMAIL="",                # support / privacy contact on your own domain
-    ENTITY="",               # legal entity that operates the product
-    ADDRESS="",              # registered address (or city and country)
-    LAW="",                  # governing law and courts, e.g. "India, courts at <city>"
-    HOSTING="",              # hosting country and provider, plus other sub-processors
-    RETENTION="",            # retention periods: account data, mail log, audit log, backups
-    GRIEVANCE="",            # grievance / data-protection contact, if advised
+    ENTITY="SUKRSH INFOTECH",               # legal entity that operates the product
+    ADDRESS="C 229,KA-324, Pratap vihar,ghaziabad,201009",              # registered address (or city and country)
+    LAW="India, courts at Ghaziabad",                  # governing law and courts, e.g. "India, courts at <city>"
+    HOSTING="india,cloudflare",              # hosting country and provider, plus other sub-processors
+    RETENTION="365 days",            # retention periods: account data, mail log, audit log, backups
+    GRIEVANCE="codzentechnology@gmail.com",            # grievance / data-protection contact, if advised
     DATE="16 October 2026",  # policy effective / last-updated date
     VERSION="0.1",
 )
