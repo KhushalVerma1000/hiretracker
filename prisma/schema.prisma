@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Neon: DATABASE_URL = pooled connection (host contains "-pooler"), used by the app.
+//       DIRECT_URL   = direct connection, used only by `prisma migrate`.
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Lead {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  name        String
+  email       String   @unique // one trial entry per email
+  phone       String
+  company     String
+  role        String
+  companyType String
+  teamSize    String
+  challenge   String?
+  consent     Boolean
+  consentAt   DateTime
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+  status      String   @default("NEW") // NEW, REVIEWING, SELECTED (3 months free), NOT_SELECTED, TRIAL, WON, LOST
+  reviewNote  String?  // your reason for selecting / not selecting
+  notified    Boolean  @default(false)
+  confirmed   Boolean  @default(false)
+
+  @@index([createdAt])
+}
+
+// Hashed-IP request log used for rate limiting (no raw IPs stored).
+model Attempt {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  ipHash    String
+
+  @@index([ipHash, createdAt])
+}
