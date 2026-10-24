@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": "22.x"
   },
   "scripts": {
     "build": "prisma generate",
@@ -14,9 +14,7 @@
   },
   "dependencies": {
     "@prisma/client": "^6.19.0",
-    "resend": "^4.0.0"
-  },
-  "devDependencies": {
+    "resend": "^4.0.0",
     "prisma": "^6.19.0"
   }
 }

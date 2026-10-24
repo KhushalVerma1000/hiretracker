@@ -1,6 +1,6 @@
 {
   "outputDirectory": "site",
-  "buildCommand": "prisma generate",
+  "buildCommand": "npx prisma generate",
   "trailingSlash": true,
   "headers": [
     {
