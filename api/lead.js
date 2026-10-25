@@ -47,7 +47,10 @@ export default async function handler(req, res) {
     await prisma.lead.update({ where: { id: lead.id }, data: sent });
     return json(res, 200, { ok: true });
   } catch (e) {
-    console.error("lead handler failed:", e?.name, e?.code); // never log request data
+    // Never log request data. Start-up errors carry no user data, so their (credential-redacted) message is safe to log.
+    const detail = e?.name === "PrismaClientInitializationError"
+      ? String(e.message || "").replace(/(postgres(?:ql)?:\/\/)[^@\s]+@/gi, "$1***@").replace(/\s+/g, " ").slice(0, 400) : "";
+    console.error("lead handler failed:", e?.name, e?.errorCode || e?.code, detail);
     return json(res, 500, { ok: false, error: "Something went wrong. Please try again." });
   }
 }

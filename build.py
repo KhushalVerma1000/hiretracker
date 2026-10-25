@@ -216,7 +216,7 @@ def build():
     h = base64.b64encode(hashlib.sha256(BOOT.encode()).digest()).decode()
     csp = f"default-src 'self'; script-src 'self' 'sha256-{h}'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
     hdr = lambda k, v: {"key": k, "value": v}
-    cfg = {"outputDirectory": "site", "buildCommand": "prisma generate", "trailingSlash": True,
+    cfg = {"outputDirectory": "site", "installCommand": "npm install --no-audit --no-fund", "buildCommand": "npm install --no-audit --no-fund && npx prisma generate", "trailingSlash": True, "functions": {"api/lead.js": {"maxDuration": 15, "includeFiles": "node_modules/.prisma/client/**"}},
       "headers": [{"source": "/(.*)", "headers": [hdr("Content-Security-Policy", csp), hdr("Strict-Transport-Security", "max-age=31536000; includeSubDomains"), hdr("X-Content-Type-Options", "nosniff"), hdr("X-Frame-Options", "DENY"), hdr("Referrer-Policy", "strict-origin-when-cross-origin"), hdr("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=()"), hdr("Cross-Origin-Opener-Policy", "same-origin")]},
                   {"source": "/api/(.*)", "headers": [hdr("Cache-Control", "no-store")]}]}
     open("vercel.json", "w").write(json.dumps(cfg, indent=2))

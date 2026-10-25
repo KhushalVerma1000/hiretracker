@@ -1,7 +1,14 @@
 {
   "outputDirectory": "site",
-  "buildCommand": "prisma generate",
+  "installCommand": "npm install --no-audit --no-fund",
+  "buildCommand": "npm install --no-audit --no-fund && npx prisma generate",
   "trailingSlash": true,
+  "functions": {
+    "api/lead.js": {
+      "maxDuration": 15,
+      "includeFiles": "node_modules/.prisma/client/**"
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
