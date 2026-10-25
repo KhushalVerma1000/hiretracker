@@ -1,8 +1,7 @@
 {
   "outputDirectory": "site",
-"installCommand": "npm install --no-audit --no-fund",
-"buildCommand": "npm install --no-audit --no-fund && npx prisma generate",
-"trailingSlash": true,
+  "buildCommand": "prisma generate",
+  "trailingSlash": true,
   "headers": [
     {
       "source": "/(.*)",
