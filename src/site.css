@@ -69,3 +69,12 @@ details{border-bottom:1px solid var(--line);padding:16px 0}summary{cursor:pointe
 .mail{background:var(--tint);border-radius:16px;padding:36px;max-width:820px;margin:0 auto}.mail h2{margin-top:0}
 nav .links{display:flex;gap:22px;align-items:center}nav .links a:not(.btn){color:var(--mut);text-decoration:none;font-size:15px}@media(max-width:820px){nav .links a:not(.btn){display:none}}
 footer nav,footer .fl2{display:flex;gap:18px;flex-wrap:wrap}footer a{text-decoration:none}
+.offer{margin:18px 0 0;color:var(--mut);font-size:15px}.offer b{color:var(--ink)}.offer a{color:var(--pri)}
+.trial{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start}@media(max-width:820px){.trial{grid-template-columns:1fr}}
+.form{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;box-shadow:0 24px 60px -30px rgba(30,40,120,.35)}
+.form .f{display:flex;flex-direction:column;gap:6px}.form .full{grid-column:1/-1}@media(max-width:560px){.form{grid-template-columns:1fr;padding:20px}}
+.form label{font-size:14px;font-weight:600}.form input,.form select,.form textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 12px;width:100%}
+.form textarea{min-height:84px;resize:vertical}.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--pri);outline-offset:1px}
+.form .err{color:#C0392B;font-size:13px;min-height:0}.form .chk{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--mut)}.form .chk input{width:auto;margin-top:4px}.form .chk a{color:var(--pri)}
+.form button{font:inherit;cursor:pointer;border:0}.form button[disabled]{opacity:.6;cursor:wait}.form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form .status{font-size:14px}.thanks{padding:32px;text-align:center}.thanks h3{font-size:24px;margin:0 0 8px}

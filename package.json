@@ -1,0 +1,20 @@
+{
+  "name": "landing-site",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "build": "prisma generate",
+    "postinstall": "prisma generate",
+    "site": "python3 build.py",
+    "migrate": "prisma migrate deploy",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "resend": "^4.0.0",
+    "prisma": "^6.19.0"
+  }
+}
